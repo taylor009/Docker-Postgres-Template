@@ -17,10 +17,10 @@
         - "5432:5432"
       volumes:
         - ./database:/app/database/
-#        - ./database/ddl:/docker-entrypoint-initdb.d/     Example
+#        - ./database/ddl:/docker-entrypoint-initdb.d/     directory would be load and run inside of container on creation.
       environment:
         - POSTGRES_USER=root
-        - POSTGRES_PASSWORD=ns_123456
+        - POSTGRES_PASSWORD=password
       networks:
         - backend
 
